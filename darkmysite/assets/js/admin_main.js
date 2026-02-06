@@ -305,6 +305,7 @@ function darkmysite_save() {
 
     var post_data = {
         'action': 'darkmysite_update_settings',
+        'darkmysite_nonce': jQuery("#darkmysite_nonce").val(),
 
         /* Control */
         'show_rating_block': jQuery(".darkmysite_rating_msg_block").length > 0 ? "1" : "0",
@@ -403,7 +404,16 @@ function darkmysite_save() {
             var obj = JSON.parse(data);
             if (obj.status === "true") {
                 jQuery('.darkmysite_body_header_save_btn').text('SAVE CHANGES').prop('disabled', false);
+            } else {
+                jQuery('.darkmysite_body_header_save_btn').text('SAVE CHANGES').prop('disabled', false);
+                if (obj.message) {
+                    alert('Error: ' + obj.message);
+                }
             }
+        },
+        error: function() {
+            jQuery('.darkmysite_body_header_save_btn').text('SAVE CHANGES').prop('disabled', false);
+            alert('An error occurred while saving settings.');
         }
     });
 }

@@ -5,6 +5,13 @@ $result = array();
 /* Check if user has admin capabilities */
 if(current_user_can('manage_options')){
 
+    /* CSRF Protection - Verify nonce */
+    if (!isset($_REQUEST['darkmysite_nonce']) || !wp_verify_nonce($_REQUEST['darkmysite_nonce'], 'darkmysite_update_settings_nonce')) {
+        $result = array("status" => 'false', "message" => 'Security check failed');
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+        wp_die();
+    }
+
     if(isset($_REQUEST['enable_dark_mode_switch'])){
 
         /* Control */

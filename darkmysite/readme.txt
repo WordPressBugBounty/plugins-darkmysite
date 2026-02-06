@@ -2,8 +2,8 @@
 Contributors: darkmysite, shafayatbayezid
 Donate link: https://darkmysite.com
 Tags: dark, dark mode, dark theme, night mode, wordpress dark mode
-Tested up to: 6.6
-Stable tag: 1.2.8
+Tested up to: 6.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,6 +122,12 @@ Absolutely not. DarkMySite is carefully built with performance in mind. Our plug
 
 
 == Changelog ==
+
+= 1.2.9 =
+The plugin code has been reviewed and updated.
+1. Modified the plugin for compatibility with the newest WordPress version (Free & Premium)
+2. Updated several dark mode implementation techniques (Free & Premium)
+3. Fixed the security vulnerability issue.
 
 = 1.2.8 =
 Code of the plugin has been revised.

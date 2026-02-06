@@ -3,7 +3,7 @@
  * Plugin Name:       DarkMySite
  * Plugin URI:        https://darkmysite.com
  * Description:       Simplest way to enable dark mode on your website - DarkMySite.
- * Version:           1.2.8
+ * Version:           1.2.9
  * Author:            DarkMySite - WP Dark Mode
  * Author URI:        https://darkmysite.com
  * License:           GPL-2.0+
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-defined( 'DARKMYSITE_VERSION' ) or define( 'DARKMYSITE_VERSION', '1.2.8' );
+defined( 'DARKMYSITE_VERSION' ) or define( 'DARKMYSITE_VERSION', '1.2.9' );
 defined( 'DARKMYSITE_PATH' ) or define( 'DARKMYSITE_PATH', plugin_dir_path( __FILE__ ) );
 defined( 'DARKMYSITE_URL' ) or define( 'DARKMYSITE_URL', plugin_dir_url( __FILE__ ) );
 defined( 'DARKMYSITE_BASE_FILE' ) or define( 'DARKMYSITE_BASE_FILE', __FILE__ );

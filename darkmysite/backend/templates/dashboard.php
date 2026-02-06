@@ -7,6 +7,9 @@ $settings = $this->settings->get_all_darkmysite_settings();
 
 <div class="darkmysite_main">
 
+    <!-- CSRF Protection - Hidden nonce field -->
+    <input type="hidden" id="darkmysite_nonce" name="darkmysite_nonce" value="<?php echo wp_create_nonce('darkmysite_update_settings_nonce'); ?>" />
+
     <div class="darkmysite_sidebar">
         <?php include DARKMYSITE_PATH . "backend/templates/views/sidebar.php"; ?>
     </div>
